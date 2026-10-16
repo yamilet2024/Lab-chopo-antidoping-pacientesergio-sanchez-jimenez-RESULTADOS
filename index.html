@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Laboratorio - CHOPO</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .report-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 850px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .logo-section {
+            flex: 1;
+        }
+
+        .logo-placeholder {
+            color: #0066cc;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .logo-placeholder span {
+            color: #00a651;
+        }
+
+        .slogan {
+            font-size: 12px;
+            color: #0066cc;
+            margin-top: 0;
+        }
+
+        .folio-section {
+            text-align: right;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .folio-section strong {
+            font-size: 16px;
+        }
+
+        /* Patient Info */
+        .patient-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .patient-info div {
+            line-height: 1.6;
+        }
+
+        /* Table */
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        .results-table th {
+            background-color: #000066;
+            color: #ffffff;
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #000066;
+        }
+
+        .results-table th:nth-child(2),
+        .results-table th:nth-child(3) {
+            text-align: center;
+        }
+
+        .results-table td {
+            padding: 10px 8px;
+            border: 1px solid #ddd;
+        }
+
+        .results-table td:nth-child(2),
+        .results-table td:nth-child(3) {
+            text-align: center;
+        }
+
+        .negative-result {
+            font-weight: bold;
+            color: #008000; /* Green for negative */
+        }
+
+        /* Notes */
+        .notes {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .notes p {
+            margin: 5px 0;
+        }
+
+        /* Validation Box */
+        .validation-box {
+            border: 2px solid #0066cc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .validation-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background-color: #0066cc;
+        }
+
+        .validation-content {
+            padding-left: 15px;
+        }
+
+        .validation-content h3 {
+            margin: 0 0 10px 0;
+            color: #0066cc;
+            font-size: 18px;
+        }
+
+        .validation-content p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .validation-content .status {
+            font-size: 20px;
+            font-weight: bold;
+            color: #008000;
+            text-transform: uppercase;
+        }
+
+        .qr-placeholder {
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #888;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            font-size: 11px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        .footer strong {
+            color: #333;
+        }
+
+        /* Signature */
+        .signature {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 24px;
+            color: #333;
+            transform: rotate(-5deg);
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="report-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo-placeholder">CH<span>O</span>PO</div>
+                <p class="slogan">Porque tu salud es lo primero</p>
+            </div>
+            <div class="folio-section">
+                <div>Orden: <strong>IR0178159</strong></div>
+                <div>ID Paciente: 14545410</div>
+                <div style="margin-top: 10px; color: #0066cc; font-weight: bold;">Resultados</div>
+                <div style="color: #0066cc; font-weight: bold;">Análisis Clínicos</div>
+            </div>
+        </div>
+
+        <!-- Patient Info -->
+        <div class="patient-info">
+            <div>
+                <div><strong>Paciente:</strong> SERGIO SANCHEZ JIMÉNEZ</div>
+                <div><strong>Fecha de nacimiento:</strong> 18/Septiembre/1994</div>
+                <div><strong>Fecha:</strong> 14/Octubre/2026 13:28:48 hrs</div>
+            </div>
+            <div style="text-align: right;">
+                <div><strong>Sexo:</strong> Masculino</div>
+                <div><strong>Edad:</strong> 32 Años</div>
+                <div><strong>Dirigido a:</strong> A QUIEN CORRESPONDA</div>
+            </div>
+        </div>
+
+        <!-- Results Table -->
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <th>Prueba</th>
+                    <th>Resultado</th>
+                    <th>Límites de referencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" style="background-color: #f9f9f9; font-weight: bold;">BÚSQUEDA DE 3 DROGAS EN ORINA</td>
+                </tr>
+                <tr>
+                    <td>Anfetaminas/Metanfetaminas</td>
+                    <td class="negative-result">No Reactivo (Negativo)</td>
+                    <td>No reactivo</td>
+                </tr>
+                <tr>
+                    <td>Cannabinoides</td>
+                    <td class="negative-result">No Reactivo (Negativo)</td>
+                    <td>No reactivo</td>
+                </tr>
+                <tr>
+                    <td>Cocaína</td>
+                    <td class="negative-result">No Reactivo (Negativo)</td>
+                    <td>No reactivo</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Notes -->
+        <div class="notes">
+            <p><strong>Interpretación de Resultados:</strong></p>
+            <p>Cualquier resultado por arriba del límite de corte es considerado como Reactivo.</p>
+            <p><strong>Límite de corte:</strong></p>
+            <p>Anfetaminas/Metanfetaminas: 1000 ng/mL</p>
+            <p>Cannabinoides: 50 ng/mL</p>
+            <p>Cocaína: 300 ng/mL</p>
+            <p style="margin-top: 10px;"><em>Criterios establecidos según Substance Abuse and Metal Health Service Administration (SAMHSA).</em></p>
+            
+            <p style="margin-top: 15px;"><strong>NOTAS:</strong></p>
+            <p>El presente resultado es presuntivo y tiene utilidad clínica. Cualquier resultado Reactivo no confirmado, solo debe ser utilizado con fines médicos.</p>
+            <p>En caso de requerir la prueba confirmatoria solicitarla al Laboratorio de manera expresa y sobre la misma muestra.</p>
+            <p>*Las muestras reactivas se almacenan en el laboratorio por dos meses y las muestras no reactivas por tres días.</p>
+            <p><strong>Método:</strong> Inmunocromatográfico</p>
+        </div>
+
+        <!-- Validation Box -->
+        <div class="validation-box">
+            <div class="validation-content">
+                <h3>✅ Caja de Validación de Resultados</h3>
+                <p><strong>Folio de Estudios:</strong> IR0178159</p>
+                <p><strong>Estado de Validación:</strong> <span class="status">NEGATIVO</span></p>
+                <p><strong>Validado por:</strong> Q.F.B. Ana Gabriela Paredes Aguirre</p>
+                <p><strong>Cédula Profesional:</strong> 9118979</p>
+                <div class="signature">Ana G. Paredes</div>
+            </div>
+            <div class="qr-placeholder">
+                [Código QR de Validación]
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>INFORME FINAL ENVIADO POR CORREO ELECTRÓNICO</strong></p>
+            <p>Gracias por permitirnos servirle</p>
+            <p>Responsable del Laboratorio de Análisis Clínicos</p>
+            <p><strong>Q.F.B. Ana Gabriela Paredes Aguirre</strong></p>
+            <p>Benemérita Universidad Autónoma de Puebla - Cédula Profesional: 9118979</p>
+            <br>
+            <p>Acreditación ema: CDMx No: CL-001, GDL No: CL-030, GTO No: CL-094, QRO No: CL-095,</p>
+            <p>PUE No: CL-114, MTY No: CL-131</p>
+            <p>"Consulte el alcance de la acreditación en la siguiente liga: www.ema.org.mx"</p>
+            <br>
+            <p><strong>GRUPO DIAGNÓSTICO MÉDICO PROA S.A. DE C.V.</strong></p>
+            <p>SUCURSAL PLAZA ANAHUAC</p>
+            <p>ORION NORTE 501 LOC 2, COL. CIUDAD JUDICIAL SIGLO XXI C.P.72810</p>
+            <p>SAN ANDRES CHOLULA, PUEBLA | www.chopo.com.mx</p>
+        </div>
+    </div>
+
+</body>
+  </html>
